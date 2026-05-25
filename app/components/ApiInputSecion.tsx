@@ -31,7 +31,9 @@ const ApiInputSection = ({
       const json = await res.json();
       setData(json);
       setIsFetching(false);
+      setErr(false);
     } else {
+      setData([]);
       setErr(true);
     }
   }

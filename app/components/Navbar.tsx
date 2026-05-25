@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { LayoutDashboard, Globe, Settings, Menu, X } from "lucide-react";
+import Link from "next/link";
 
 interface NavItem {
   label: string;
@@ -34,14 +35,14 @@ const Navbar: React.FC = () => {
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
             {navItems.map((item) => (
-              <a
+              <Link
                 key={item.label}
                 href={item.href}
                 className="flex items-center gap-2 text-sm font-medium text-slate-600 hover:text-blue-600 dark:text-slate-300 dark:hover:text-blue-400 transition-colors"
               >
                 {item.icon}
                 {item.label}
-              </a>
+              </Link>
             ))}
           </div>
 
@@ -61,14 +62,14 @@ const Navbar: React.FC = () => {
       {isOpen && (
         <div className="md:hidden bg-white dark:bg-slate-900 border-b border-gray-200 dark:border-slate-800 px-4 pt-2 pb-4 space-y-1">
           {navItems.map((item) => (
-            <a
+            <Link
               key={item.label}
               href={item.href}
               className="flex items-center gap-3 px-3 py-3 rounded-md text-base font-medium text-slate-700 dark:text-slate-200 hover:bg-slate-50 dark:hover:bg-slate-800"
             >
               {item.icon}
               {item.label}
-            </a>
+            </Link>
           ))}
         </div>
       )}

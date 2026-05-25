@@ -1,3 +1,9 @@
+import ApiInputSection from "./components/ApiInputSecion";
+
 export default function Home() {
-  return <>This is home page</>;
+  return (
+    <>
+      <ApiInputSection></ApiInputSection>
+    </>
+  );
 }

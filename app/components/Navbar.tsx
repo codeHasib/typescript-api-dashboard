@@ -12,7 +12,6 @@ interface NavItem {
 const navItems: NavItem[] = [
   { label: "Dashboard", href: "/", icon: <LayoutDashboard size={18} /> },
   { label: "API Explorer", href: "/explorer", icon: <Globe size={18} /> },
-  { label: "Settings", href: "/settings", icon: <Settings size={18} /> },
 ];
 
 const Navbar: React.FC = () => {
@@ -44,9 +43,6 @@ const Navbar: React.FC = () => {
                 {item.label}
               </a>
             ))}
-            <button className="bg-slate-800 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-slate-700 transition-all dark:bg-blue-600 dark:hover:bg-blue-500">
-              Connect API
-            </button>
           </div>
 
           {/* Mobile Menu Button */}
@@ -74,11 +70,6 @@ const Navbar: React.FC = () => {
               {item.label}
             </a>
           ))}
-          <div className="pt-4">
-            <button className="w-full bg-blue-600 text-white px-4 py-3 rounded-md font-medium">
-              Connect API
-            </button>
-          </div>
         </div>
       )}
     </nav>

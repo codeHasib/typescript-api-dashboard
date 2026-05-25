@@ -27,7 +27,7 @@ const DataDisplay = ({ data }: Props) => {
   const dataItems = isArray ? data : [data];
 
   return (
-    <div className="space-y-8">
+    <div className="space-y-8 pb-10">
       {/* Header Info */}
       <div className="flex items-center justify-between px-2">
         <div className="flex items-center gap-2">
